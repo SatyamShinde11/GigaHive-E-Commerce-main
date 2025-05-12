@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  font-family: swiper-icons;
+  font-size: 10px !important;
+  font-weight: 900;
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+  color: #000 !important;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.svgBOX {
+  background: linear-gradient(
+    90deg,
+    rgba(250, 250, 250, 1) 0%,
+    rgba(202, 232, 255, 1) 50%,
+    rgba(189, 233, 255, 1) 100%
+  );
+  animation: fadeOutBox 1s ease forwards;
+  animation-delay: 5s;
+}
+
+.animated-logo {
+  transition: width 1s ease;
+  animation: shrinkLogo 1s ease forwards;
+  animation-delay: 4s;
+}
+
+.animated-logo .logo-path {
+  stroke: #131314;
+  stroke-width: 2;
+  fill: transparent;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: textAnimation 5s ease forwards;
+}
+
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 500;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #131314;
+  }
+}
+
+@keyframes shrinkLogo {
+  0% {
+    width: 200px;
+    opacity: 1;
+  }
+  100% {
+    width: 100px;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutBox {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
