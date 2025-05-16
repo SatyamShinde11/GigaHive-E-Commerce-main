@@ -83,3 +83,40 @@
     display: none;
   }
 }
+
+.animation-scroll {
+  animation: scrollLeft 20s linear infinite;
+}
+.animation-scroll:hover {
+  animation-play-state: paused;
+}
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.LookbookCard 
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  font-family: swiper-icons;
+  font-size: 10px !important;
+  font-weight: 900;
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+  color: #000 !important;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
