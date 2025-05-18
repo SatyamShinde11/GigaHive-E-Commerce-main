@@ -8,7 +8,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { ProductData } from "../data";
-import type { Item, OrderData } from "../types";
+import type { TItem, TOrderData } from "../types";
 import Card from "../../../Components/Card";
 
 const Collection = () => {
@@ -95,8 +95,8 @@ const Collection = () => {
                 },
               }}
             >
-              {ProductData.map((order: OrderData, index: number) =>
-                order.items.map((items: Item, i: number) => (
+              {ProductData.map((order: TOrderData, index: number) =>
+                order.items.map((items: TItem, i: number) => (
                   <SwiperSlide
                     key={`${index}-${i}`}
                     className=" px-3 sm:mx-3 md:mx-5 flex  "

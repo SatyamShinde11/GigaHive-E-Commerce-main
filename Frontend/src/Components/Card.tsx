@@ -1,11 +1,11 @@
 import React from "react";
-import type { Item } from "../Pages/home/types";
+import type { TItem } from "../Pages/home/types";
 import { Link } from "react-router-dom";
 import { FaPlus } from "react-icons/fa";
 import { IoEyeOutline, IoHeartOutline } from "react-icons/io5";
 
 type Props = {
-  items: Item;
+  items: TItem;
   ShowExtraAction?: boolean;
 };
 

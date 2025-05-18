@@ -14,9 +14,9 @@ const AutoSelectInput = ({ onClose }: ChildrenType) => {
     setInputValue(val);
   };
 
-  const handelClear = () => {
-    setInputValue("");
-  };
+  // const handelClear = () => {
+  //   setInputValue("");
+  // };
   return (
     <div className="absolute flex right-0 w-full z-50  h-28 sm:h-40  text-black bg-white  top-0 ">
       <div className="relative flex flex-col w-full p-1 justify-center   items-center border rounded-md border-[#e5e7eb]  ">
