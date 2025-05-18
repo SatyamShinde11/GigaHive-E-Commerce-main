@@ -1,4 +1,4 @@
-export interface Item {
+export interface TItem {
   title: string;
   variant: string;
   price: number;
@@ -8,17 +8,17 @@ export interface Item {
   discount_percent?: number;
 }
 
-export interface OrderData {
+export interface TOrderData {
   token: string;
   original_total_price: number;
   total_price: number;
   total_discount: number;
   total_weight: number;
   item_count: number;
-  items: Item[];
+  items: TItem[];
 }
 
-export interface HomeData {
+export interface THomeData {
   id: number;
   img: string;
   heading: string;
@@ -27,9 +27,13 @@ export interface HomeData {
 }
 
 
-export interface ReviewDataType{
+export interface TReviewData{
   title:string;
   review:string;
   name:string;
   role:string
+}
+
+export interface TBrandImg{
+  BrandImg:string
 }

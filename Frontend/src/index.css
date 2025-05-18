@@ -5,6 +5,13 @@
   font-family: "Rubik", sans-serif;
 }
 
+@theme {
+  --color-primary: #41b6ea;
+  --color-secondary: #111827;
+  --color-third:#252222
+  --color-borderColor: #e5e7eb;
+}
+
 .swiper-button-prev:after,
 .swiper-button-next:after {
   width: 25px;
@@ -99,8 +106,7 @@
   }
 }
 
-.LookbookCard 
-.swiper-button-prev:after,
+.LookbookCard .swiper-button-prev:after,
 .swiper-button-next:after {
   width: 25px;
   height: 25px;

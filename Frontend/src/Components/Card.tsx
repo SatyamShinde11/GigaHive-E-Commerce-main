@@ -12,7 +12,7 @@ type Props = {
 const Card = ({ items, ShowExtraAction }: Props) => {
   return (
     <>
-      <div className="flex group  h-80 w-64 relative rounded-xl overflow-hidden flex-col  items-center ">
+      <div className="flex group bg-[#f2f2f2]  h-80 w-64 relative rounded-xl overflow-hidden flex-col  items-center ">
         <img
           src={items.image}
           alt={items.title}
@@ -30,7 +30,7 @@ const Card = ({ items, ShowExtraAction }: Props) => {
               <IoHeartOutline className="w-8 cursor-pointer hover:shadow-xs shadow-black/50 h-8 p-2 bg-white rounded-full" />
             </span>
           )}
-          <button className="bg-white hover:text-white px-4 mt-20 text-xs  cursor-pointer hover:bg-black  hover:border-black border border-[#E5E7EB] py-2 rounded-4xl transform duration-500 ">
+          <button className="bg-white hover:text-white px-4 mt-20 text-xs  cursor-pointer hover:bg-black  hover:border-black border border-border py-2 rounded-4xl transform duration-500 ">
             <Link
               to="/shop"
               className="flex gap-1 justify-center items-center  "
