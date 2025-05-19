@@ -8,7 +8,7 @@ import Blog from "./components/Blog";
 
 const index = () => {
   return (
-    <div className="mt-14   relative overflow-hidden flex flex-col    gap-20">
+    <div className="mt-14   relative overflow-hidden flex flex-col items-center    gap-20">
       <HeroSlide />
       <Category />
       <BardOfferSlide />

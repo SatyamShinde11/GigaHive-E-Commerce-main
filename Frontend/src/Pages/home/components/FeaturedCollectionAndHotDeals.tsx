@@ -6,8 +6,8 @@ import textImg from "../../../assets/HomeImg/RoundText.webp";
 
 const FeaturedCollectionAndHotDeals = () => {
   return (
-    <div className="flex gap-20 flex-col">
-      <div className="relative  px-5 sm:px-10 md:px-24 flex  items-center flex-col gap-5 ">
+    <div className="flex gap-20 flex-col  ">
+      <div className="relative  px-5 sm:px-10 md:px-24 flex  items-center flex-col gap-5 xl:w-[1280px]">
         <h1 className="text-center text-2xl font-medium ">
           Featured collection
         </h1>
@@ -26,14 +26,14 @@ const FeaturedCollectionAndHotDeals = () => {
           )}
         </div>
       </div>
-      <div className="relative w-full bg-[#f6f6f6]   flex flex-col-reverse md:flex-row items-center  gap-5 ">
+      <div className="relative w-full bg-gray-100   flex flex-col-reverse md:flex-row items-center  gap-5 ">
         <div className="flex w-full sm:w-1/2 flex-col py-5 justify-center items-center gap-5">
           <img src={textImg} alt="" className=" w-32 " />
           <h1 className="text-xl font-bold  text-center ">Hot Deals You Can’t Miss</h1>
           <span className="text-sm">
             Buy any products & take the gift voucher
           </span>
-          <button className="bg-black text-white  py-3 px-6 text-xs  cursor-pointer hover:bg-transparent  hover:shadow-md hover:shadow-border hover:text-black  border border-border  rounded-4xl transform duration-500 ">
+          <button className="bg-black text-white  py-3 px-6 text-xs  cursor-pointer hover:bg-transparent  hover:shadow-md hover:shadow-border hover:text-black  border border-gray-200  rounded-4xl transform duration-500 ">
             Button label
           </button>
         </div>

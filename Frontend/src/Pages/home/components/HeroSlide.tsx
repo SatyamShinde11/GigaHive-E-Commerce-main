@@ -8,7 +8,7 @@ import { TbWorldPin } from "react-icons/tb";
 
 const HeroSlide = () => {
   return (
-    <div className="h-full  ">
+    <div className="h-full w-full  2xl:w-[1536px] ">
       <div className=" hidden sm:flex   ">
         <Swiper
           navigation
@@ -23,7 +23,7 @@ const HeroSlide = () => {
                   {heading}
                 </h1>
                 <span className="text-xs md:text-sm font-medium ">{para}</span>
-                <button className="bg-white px-2 md:px-4 py-1 md:py-2  text-xs md:text-sm  cursor-pointer hover:bg-[#41b7ea2c] border border-border rounded-4xl transform duration-300">
+                <button className="bg-white hover:text-white px-3 text-xs  cursor-pointer hover:bg-gray-950 hover:border-gray-950 border border-gray-200 py-2 rounded-4xl transform duration-300">
                   <Link to="/shop">{btn}</Link>
                 </button>
               </div>
@@ -56,7 +56,7 @@ const HeroSlide = () => {
                   <span className="text-xs md:text-sm font-medium ">
                     {para}
                   </span>
-                  <button className="bg-white px-4 py-2  text-xs  cursor-pointer hover:bg-[#41b7ea2c] border border-border rounded-4xl transform duration-300">
+                  <button className="bg-white px-4 py-2  text-xs  cursor-pointer hover:bg-[#41b7ea2c] border border-gray-200 rounded-4xl transform duration-300">
                     <Link to="/shop">{btn}</Link>
                   </button>
                 </div>
@@ -69,10 +69,10 @@ const HeroSlide = () => {
       <div className="flex w-full flex-wrap   ">
         {new Array(4).fill(null).map((_item, index) => (
           <div
-            className="flex w-full sm:w-1/2 md:w-1/4 py-5 md:py-10 justify-center items-center gap-3 md:border-b border-r border-border  "
+            className="flex w-full sm:w-1/2 md:w-1/4 py-5 md:py-10 justify-center items-center gap-3 md:border-b border-r border-gray-200  "
             key={index}
           >
-            <TbWorldPin className="p-2 rounded-full w-14 h-14 border border-border" />
+            <TbWorldPin className="p-2 rounded-full w-14 h-14 border border-gray-200" />
             <div className="flex flex-col gap-1">
               <h1 className="text-md">Worldwide Shipping</h1>
               <span className="text-sm text-nowrap">

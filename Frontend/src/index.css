@@ -9,7 +9,7 @@
   --color-primary: #41b6ea;
   --color-secondary: #111827;
   --color-third:#252222
-  --color-borderColor: #e5e7eb;
+  --color-gray-200: #e5e7eb;
 }
 
 .swiper-button-prev:after,
@@ -72,11 +72,9 @@
 
 @keyframes shrinkLogo {
   0% {
-    width: 200px;
     opacity: 1;
   }
   100% {
-    width: 100px;
     opacity: 0;
   }
 }

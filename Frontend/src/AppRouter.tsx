@@ -6,7 +6,6 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Shop from "./Pages/Shop";
 
-
 export const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -15,7 +14,7 @@ export const appRouter = createBrowserRouter([
     children: [
       { path: "", element: <Home /> },
       { path: "shop", element: <Shop /> },
-      
+
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
     ],

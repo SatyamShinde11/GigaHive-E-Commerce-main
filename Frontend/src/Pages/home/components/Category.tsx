@@ -11,7 +11,7 @@ import Card from "../../../Components/Card";
 const Category = () => {
   return (
     <div
-      className="flex flex-col gap-20  px-5 sm:px-10 md:px-16 lg:px-24
+      className="flex flex-col gap-20  px-5 sm:px-10 md:px-16 lg:px-24 xl:w-[1280px]
 "
     >
       <div className="w-full   ">
@@ -53,9 +53,9 @@ const Category = () => {
                     alt={item.title}
                     className="h-80 w-64 object-cover  "
                   />
-                  <div className="absolute bg-[#061e291f] h-full  w-full flex justify-center flex-col items-center gap-2 ">
+                  <div className="absolute bg-gray-900/10 h-full  w-full flex justify-center flex-col items-center gap-2 ">
                     <h1 className="text-white font-bold text-xl">Top Sales</h1>
-                    <button className="bg-white hover:text-white px-2 text-xs  cursor-pointer hover:bg-[#41b7ea2c] border border-border py-1 rounded-4xl transform duration-300">
+                    <button className="bg-white hover:text-white px-3 text-xs  cursor-pointer hover:bg-gray-950 hover:border-gray-950 border border-gray-200 py-2 rounded-4xl transform duration-300">
                       <Link to="/shop">Shop Now</Link>
                     </button>
                   </div>

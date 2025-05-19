@@ -13,7 +13,7 @@ import Card from "../../../Components/Card";
 
 const Collection = () => {
   return (
-    <div className="flex w-full  gap-20 flex-col  px-5 sm:px-10 md:px-16 lg:px-24 ">
+    <div className="flex w-full  gap-20 flex-col  px-5 sm:px-10 md:px-16 lg:px-24  xl:w-[1280px] ">
       <div className=" px-5 sm:px-10 md:px-16 lg:px-24 flex w-full justify-center gap-6 flex-wrap lg:flex-nowrap ">
         <div className="relative group rounded-2xl overflow-hidden  flex justify-center items-center  ">
           <img
@@ -28,7 +28,7 @@ const Collection = () => {
             <h1 className="text-white text-2xl md:text-4xl font-semibold">
               Spring Collection
             </h1>
-            <button className="bg-white px-4 py-2  text-xs  cursor-pointer hover:bg-[#41b7ea2c] border border-border rounded-4xl transform duration-300">
+            <button className="bg-white hover:text-white px-3 text-xs  cursor-pointer hover:bg-gray-950 hover:border-gray-950 border border-gray-200 py-2 rounded-4xl transform duration-300">
               Explore now
             </button>
           </div>
@@ -45,7 +45,7 @@ const Collection = () => {
             <h1 className="text-white text-2xl md:text-4xl  font-semibold">
               -25% Off Items
             </h1>
-            <button className="bg-white px-4 py-2  text-xs  cursor-pointer hover:bg-[#41b7ea2c] border border-border rounded-4xl transform duration-300">
+            <button className="bg-white hover:text-white px-3 text-xs  cursor-pointer hover:bg-gray-950 hover:border-gray-950 border border-gray-200 py-2 rounded-4xl transform duration-300">
               Explore now
             </button>
           </div>
@@ -69,7 +69,7 @@ const Collection = () => {
           <div className="w-full h-full">
             <Swiper
               slidesPerView={1.5}
-              spaceBetween={10}
+              spaceBetween={30}
               navigation
               modules={[Navigation]}
               loop={true}
@@ -99,7 +99,7 @@ const Collection = () => {
                 order.items.map((items: TItem, i: number) => (
                   <SwiperSlide
                     key={`${index}-${i}`}
-                    className=" px-3 sm:mx-3 md:mx-5 flex  "
+                    className=" px-3  md:mx-5 lg:mx-6 flex "
                   >
                     <div className="relative">
                       <Card items={items} key={index} />

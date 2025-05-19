@@ -7,8 +7,10 @@ import type { TBrandImg } from "../../Pages/home/types";
 
 const Footer: React.FC = () => {
   return (
-    <div className="mt-20 flex flex-col">
-      <div className="flex overflow-auto  justify-evenly py-10 bg-[#f6f6f6] gap-5  border-b border-border">
+    <div className="mt-20 flex justify-center ">
+      <div className="flex flex-col  xl:w-[1280px] ">
+
+           <div className="flex overflow-auto scroll-hidden justify-evenly py-10 bg-gray-100 gap-5  border-b border-gray-200">
         {BrandImg.map((items: TBrandImg, index: number) => (
           <img
             src={items.BrandImg}
@@ -18,7 +20,7 @@ const Footer: React.FC = () => {
           />
         ))}
       </div>
-      <div className="bg-[#f6f6f6] w-full">
+      <div className="bg-gray-100 w-full">
         <div className="flex  flex-wrap  sm:justify-between gap-6 py-10 px-5 sm:px-10 md:px-24">
           <ul className="flex flex-col gap-4 ">
             <h1 className="text-2xl font-medium ">Contact Info</h1>
@@ -77,18 +79,20 @@ const Footer: React.FC = () => {
               <span className="text-gray-600 text-sm">
                 Subscribe to our newsletter to receive news on update.
               </span>
-              <div className="border border-border  bg-white flex w-full h-10 rounded-md justify-center items-center ">
+              <div className="border border-gray-200  bg-white flex w-full h-10 rounded-md justify-center items-center ">
                 <input type="email" className="w-full p-2 outline-none" />
                 <MdArrowForward className="cursor-pointer  w-10 h-full p-2" />
               </div>
             </div>
           </ul>
         </div>
-        <div className="flex flex-wrap  justify-center sm:justify-between border-t  w-full  border-border gap-2  py-10 px-5 sm:px-10 md:px-24">
+        <div className="flex flex-wrap  justify-center sm:justify-between border-t  w-full  border-gray-200 gap-2  py-10 px-5 sm:px-10 md:px-24">
           <span>@2025 Foesta shopify theme</span>
           <Footerimg />
         </div>
       </div>
+      </div>
+   
     </div>
   );
 };

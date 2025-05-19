@@ -2,7 +2,7 @@ import React from "react";
 
 function BardOfferSlide() {
   return (
-    <div className="relative overflow-hidden bg-[#f6f6f6]  py-10 ">
+    <div className="relative overflow-hidden bg-gray-100  py-10 ">
       <div className="flex gap-20 animation-scroll ">
         {new Array(5).fill(null).map((_, index) => (
           <div key={index} className="flex gap-20">
