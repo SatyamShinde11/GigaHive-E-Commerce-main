@@ -10,11 +10,7 @@ type Props = {
 };
 
 const Card = ({ items, ShowExtraAction }: Props) => {
-  const handelAddToCart = () => {
-
-    console.log("Show to Log");
-    
-  };
+  const handelAddToCart = () => {};
 
   return (
     <>
@@ -38,7 +34,7 @@ const Card = ({ items, ShowExtraAction }: Props) => {
           )}
           <button
             onClick={handelAddToCart}
-            className="bg-white hover:text-white px-3 text-xs  cursor-pointer hover:bg-gray-950 hover:border-gray-950 border border-gray-200 py-2 rounded-4xl transform duration-300"
+            className="bg-gray-950 hover:text-black text-white px-3 text-xs  cursor-pointer hover:bg-white hover:border-gray-200 border-gray-950 border  py-2 rounded-4xl transform duration-300"
           >
             <Link to="" className="flex gap-1 justify-center items-center  ">
               {" "}

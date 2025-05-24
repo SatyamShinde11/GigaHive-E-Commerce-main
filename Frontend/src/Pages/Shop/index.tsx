@@ -33,7 +33,7 @@ const Shop: React.FC = () => {
   return (
     <div className="mt-14 relative overflow-hidden flex flex-col gap-10 w-full">
       <div className="bg-gray-100 py-10 flex flex-col gap-5 items-center w-full">
-        <h1 className="text-2xl font-medium text-center">Products</h1>
+        <h1 className="text-2xl font-medium text-center">Shop</h1>
         <div className="flex text-xs gap-2">
           <h1 className="text-gray-500">Home</h1>-<h1>Shop</h1>
         </div>

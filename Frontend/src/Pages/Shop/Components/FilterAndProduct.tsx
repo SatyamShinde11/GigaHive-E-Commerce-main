@@ -16,9 +16,7 @@ const FilterAndProduct = () => {
     const allItems: TItem[] = ProductData.flatMap(
       (order: TOrderData) => order.items
     );
-    
 
-    
     setProductShowData(allItems);
     setAllProducts(allItems);
   }, []);
@@ -56,9 +54,20 @@ const FilterAndProduct = () => {
 
   const handleClearFilterValue = () => {
     setFilterValueArr([]);
+    setOpenSection((prev) => {
+      const newState: Record<number, boolean> = {};
+      for (const key in prev) {
+        newState[key] = false;
+      }
+      return newState;
+    });
   };
 
   useEffect(() => {
+    if (filterValueArr.length === 0 && !priceRange.from && !priceRange.to) {
+      setProductShowData(allProducts);
+      return;
+    }
     const filterDatas = allProducts.filter((items: TItem) => {
       return filterValueArr.some(
         (value) =>
@@ -70,7 +79,7 @@ const FilterAndProduct = () => {
       );
     });
     setProductShowData(filterDatas);
-  }, [filterValueArr, priceRange]);
+  }, [filterValueArr, priceRange, allProducts]);
 
   return (
     <div className="flex w-full gap-10 relative ">
