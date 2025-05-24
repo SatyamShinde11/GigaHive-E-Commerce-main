@@ -147,6 +147,9 @@ const index = () => {
           <h2 className="text-sm">₹ {items.price}</h2>
 
           <p className=" text-sm flex items-center gap-2 ">
+
+
+            
             <span>Color:</span>{" "}
             <span className="text-xs text-gray-700">{items.color}</span>{" "}
           </p>
