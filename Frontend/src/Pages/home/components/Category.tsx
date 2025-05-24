@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import type { TItem, TOrderData } from "../types";
+import type { TItem, TOrderData } from "../../../types/types";
 import { Link } from "react-router-dom";
 import { ProductData } from "../data";
 import Card from "../../../Components/Card";

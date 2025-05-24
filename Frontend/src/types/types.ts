@@ -5,7 +5,10 @@ export interface TItem {
   image: string;
   image2: string;
   quantity: number;
-  discount_percent?: number;
+  color?: string;
+  size?: string;
+  stock?: string;
+  brand?: string;
 }
 
 export interface TOrderData {
@@ -26,14 +29,25 @@ export interface THomeData {
   btn: string;
 }
 
-
-export interface TReviewData{
-  title:string;
-  review:string;
-  name:string;
-  role:string
+export interface TReviewData {
+  title: string;
+  review: string;
+  name: string;
+  role: string;
 }
 
-export interface TBrandImg{
-  BrandImg:string
+export interface TBrandImg {
+  BrandImg: string;
+}
+
+export interface TFilterOption {
+  label: string;
+  count: number;
+}
+
+export interface TFilterData {
+  title: string;
+  id: number;
+  type: string;
+  options?: TFilterOption[];
 }

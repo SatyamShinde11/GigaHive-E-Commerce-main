@@ -3,7 +3,7 @@ import { MdArrowForward } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Footerimg from "../../assets/Footerimg";
 import { BrandImg } from "../../Pages/home/data";
-import type { TBrandImg } from "../../Pages/home/types";
+import type { TBrandImg } from "../../types/types";
 
 const Footer: React.FC = () => {
   return (

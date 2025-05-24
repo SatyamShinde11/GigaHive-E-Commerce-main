@@ -1,6 +1,6 @@
 import React from "react";
 import { ProductData } from "../data";
-import type { TItem, TOrderData } from "../types";
+import type { TItem, TOrderData } from "../../../types/types";
 import Card from "../../../Components/Card";
 import textImg from "../../../assets/HomeImg/RoundText.webp";
 

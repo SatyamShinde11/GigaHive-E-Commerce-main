@@ -78,10 +78,10 @@ export const ProductData = [
     total_discount: 0,
     total_weight: 1500,
     item_count: 13,
+
     items: [
       {
         title: "Vintage-Inspired Floral Midi Dress",
-        variant: "Black / Medium",
         price: 7000,
         image:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/13_8d808684-401c-46d2-adfa-dfb619e65437.png?v=1716285430",
@@ -89,20 +89,28 @@ export const ProductData = [
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/12_c0ced60c-918f-484f-94db-415f4e609aae.png?v=1716285375",
         quantity: 1,
         discount_percent: 28,
+        variant: "Black / Medium",
+        color: "Black",
+        size: "Medium",
+        stock: "In stock",
+        brand: "Foesta-demo",
       },
       {
         title: "Trendy Toddler Denim Jacket",
-        variant: "Default Title",
         price: 6500,
         image:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/12_c0ced60c-918f-484f-94db-415f4e609aae.png?v=1716285375",
         image2:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/13_8d808684-401c-46d2-adfa-dfb619e65437.png?v=1716285430",
         quantity: 1,
+        variant: "Default Title",
+        color: "White",
+        size: "Small",
+        stock: "In stock",
+        brand: "parthers-demo",
       },
       {
         title: "Trendy Denim Jacket with Patches",
-        variant: "Default Title",
         price: 7000,
         image:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/8_2ccc4c78-855a-4461-b9d6-f56a8669ee4c.png?v=1716285336",
@@ -110,30 +118,42 @@ export const ProductData = [
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/6_d1d65842-5cf5-44b3-b8a5-cc40d2815665.png?v=1716285291",
         quantity: 1,
         discount_percent: 28,
+        variant: "Default Title",
+        color: "Blue",
+        size: "Large",
+        stock: "In stock",
+        brand: "Foesta-demo",
       },
       {
         title: "Statement Geometric Print Scarf",
-        variant: "Black / Small",
         price: 5000,
         image:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/6_d1d65842-5cf5-44b3-b8a5-cc40d2815665.png?v=1716285291",
         image2:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/8_2ccc4c78-855a-4461-b9d6-f56a8669ee4c.png?v=1716285336",
         quantity: 1,
+        variant: "Black / Small",
+        color: "Black",
+        size: "Small",
+        stock: "In stock",
+        brand: "Foesta-demo",
       },
       {
         title: "Modern Slim Fit Suit",
-        variant: "Default Title",
         price: 7000,
         image:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/11.png?v=1716285223",
         image2:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/2.png?v=1716285182",
         quantity: 1,
+        variant: "Default Title",
+        color: "Blue",
+        size: "Medium",
+        stock: "In stock",
+        brand: "parthers-demo",
       },
       {
         title: "Modern Slim Fit Chino Pants",
-        variant: "Default Title",
         price: 8400,
         image:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/2.png?v=1716285182",
@@ -141,30 +161,42 @@ export const ProductData = [
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/11.png?v=1716285223",
         quantity: 1,
         discount_percent: 28,
+        variant: "Default Title",
+        color: "Black",
+        size: "Medium",
+        stock: "In stock",
+        brand: "Foesta-demo",
       },
       {
         title: "Stylish Quilted Winter Jacket",
-        variant: "Default Title",
         price: 7900,
         image:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/3.png?v=1716285176",
         image2:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/5.png?v=1716285168",
         quantity: 1,
+        variant: "Default Title",
+        color: "Yellow",
+        size: "Large",
+        stock: "In stock",
+        brand: "parthers-demo",
       },
       {
         title: "Casual Cotton Blazer",
-        variant: "Default Title",
         price: 5200,
         image:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/5.png?v=1716285168",
         image2:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/3.png?v=1716285176",
         quantity: 1,
+        variant: "Default Title",
+        color: "White",
+        size: "Small",
+        stock: "In stock",
+        brand: "Foesta-demo",
       },
       {
         title: "Trendy Checked Casual Shirt",
-        variant: "Default Title",
         price: 5300,
         image:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/7.png?v=1716285160",
@@ -172,20 +204,28 @@ export const ProductData = [
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/9.png?v=1716285153",
         quantity: 1,
         discount_percent: 28,
+        variant: "Default Title",
+        color: "Blue",
+        size: "Medium",
+        stock: "In stock",
+        brand: "Foesta-demo",
       },
       {
         title: "Elegant Embroidered Kurti",
-        variant: "Default Title",
         price: 6100,
         image:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/9.png?v=1716285153",
         image2:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/7.png?v=1716285160",
         quantity: 1,
+        variant: "Default Title",
+        color: "Yellow",
+        size: "Large",
+        stock: "In stock",
+        brand: "Foesta-demo",
       },
       {
         title: "Elegant Satin Saree with Blouse",
-        variant: "Default Title",
         price: 6100,
         image:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/10.png?v=1716285145",
@@ -193,20 +233,28 @@ export const ProductData = [
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/1.png?v=1716285122",
         discount_percent: 28,
         quantity: 1,
+        variant: "Default Title",
+        color: "Black",
+        size: "Small",
+        stock: "In stock",
+        brand: "parthers-demo",
       },
       {
         title: "Chic Off-Shoulder Evening Gown",
-        variant: "Default Title",
         price: 6300,
         image:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/1.png?v=1716285122",
         image2:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/10.png?v=1716285145",
         quantity: 1,
+        variant: "Default Title",
+        color: "White",
+        size: "Large",
+        stock: "In stock",
+        brand: "Foesta-demo",
       },
       {
         title: "Cotton Printed Night Suit",
-        variant: "Default Title",
         price: 6000,
         image:
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/4.png?v=1716285106",
@@ -214,6 +262,11 @@ export const ProductData = [
           "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/1.png?v=1716285122",
         discount_percent: 28,
         quantity: 1,
+        variant: "Default Title",
+        color: "Blue",
+        size: "Medium",
+        stock: "In stock",
+        brand: "parthers-demo",
       },
     ],
   },

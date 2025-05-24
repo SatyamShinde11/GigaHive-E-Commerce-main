@@ -4,7 +4,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { ReviewsData } from "../data";
-import type { TReviewData } from "../types";
+import type { TReviewData } from "../../../types/types";
 
 import { MdStarHalf, MdStarRate } from "react-icons/md";
 import { FaUser } from "react-icons/fa";

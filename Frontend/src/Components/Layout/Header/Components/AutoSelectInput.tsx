@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MdClose, MdOutlineSearch } from "react-icons/md";
 import { ProductData } from "../../../../Pages/home/data";
-import type { TItem } from "../../../../Pages/home/types";
+import type { TItem } from "../../../../types/types";
 import { Link } from "react-router-dom";
 interface ChildrenType {
   onClose: () => void;

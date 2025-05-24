@@ -8,7 +8,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { ProductData } from "../data";
-import type { TItem, TOrderData } from "../types";
+import type { TItem, TOrderData } from "../../../types/types";
 import Card from "../../../Components/Card";
 
 const Collection = () => {
