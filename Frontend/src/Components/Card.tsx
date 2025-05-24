@@ -10,7 +10,11 @@ type Props = {
 };
 
 const Card = ({ items, ShowExtraAction }: Props) => {
-  const handelAddToCart = () => {};
+  const handelAddToCart = () => {
+
+    console.log("Show to Log");
+    
+  };
 
   return (
     <>
