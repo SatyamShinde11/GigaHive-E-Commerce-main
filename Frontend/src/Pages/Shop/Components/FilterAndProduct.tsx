@@ -16,7 +16,7 @@ const FilterAndProduct = () => {
     const allItems: TItem[] = ProductData.flatMap(
       (order: TOrderData) => order.items
     );
-    // console.log(allItems);
+
     setProductShowData(allItems);
     setAllProducts(allItems);
   }, []);
