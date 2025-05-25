@@ -14,7 +14,7 @@ const Card = ({ items, ShowExtraAction }: Props) => {
 
   return (
     <>
-      <div className="flex group bg-gray-100 h-80 w-64 relative rounded-xl overflow-hidden flex-col  items-center ">
+      <div  className="flex group bg-gray-100 h-80 w-64 relative rounded-xl overflow-hidden flex-col cursor-pointer  items-center ">
         <img
           src={items.image}
           alt={items.title}

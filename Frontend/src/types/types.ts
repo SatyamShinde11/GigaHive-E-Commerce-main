@@ -9,6 +9,8 @@ export interface TItem {
   size?: string;
   stock?: string;
   brand?: string;
+  description?: string;
+  discount_percent?: number;
 }
 
 export interface TOrderData {
@@ -48,6 +50,6 @@ export interface TFilterOption {
 export interface TFilterData {
   title: string;
   id: number;
-  type: string;
+  type?: string;
   options?: TFilterOption[];
 }

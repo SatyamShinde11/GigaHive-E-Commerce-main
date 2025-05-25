@@ -1,4 +1,7 @@
-export const filterData = [
+import type { TFilterData } from "../../types/types";
+import { ProductData } from "../home/data";
+
+export const filterData: TFilterData[] = [
   {
     title: "Availability",
     id: 1,
@@ -10,7 +13,6 @@ export const filterData = [
       },
     ],
   },
-
   {
     title: "Color",
     id: 2,

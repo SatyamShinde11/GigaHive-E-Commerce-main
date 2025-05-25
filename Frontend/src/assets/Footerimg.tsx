@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footerimg = () => {
+const FooterImg = () => {
   return (
     <>
       <ul className=" flex gap-1 " role="list">
@@ -243,4 +243,4 @@ const Footerimg = () => {
   );
 };
 
-export default Footerimg;
+export default FooterImg;

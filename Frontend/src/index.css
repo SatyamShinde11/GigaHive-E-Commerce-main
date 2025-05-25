@@ -124,3 +124,14 @@
   justify-content: center;
   align-items: center;
 }
+
+
+/*footer animation  */
+@keyframes scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.scroll-loop {
+  animation: scroll 20s linear infinite;
+}

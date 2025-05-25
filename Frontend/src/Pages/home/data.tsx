@@ -94,6 +94,8 @@ export const ProductData = [
         size: "Medium",
         stock: "In stock",
         brand: "Foesta-demo",
+        description:
+          "A stylish black midi dress with vintage floral prints, perfect for any elegant occasion.",
       },
       {
         title: "Trendy Toddler Denim Jacket",
@@ -108,6 +110,8 @@ export const ProductData = [
         size: "Small",
         stock: "In stock",
         brand: "parthers-demo",
+        description:
+          "A cool and durable denim jacket designed especially for toddlers. Stylish and comfortable for daily wear.",
       },
       {
         title: "Trendy Denim Jacket with Patches",
@@ -123,6 +127,8 @@ export const ProductData = [
         size: "Large",
         stock: "In stock",
         brand: "Foesta-demo",
+        description:
+          "A bold denim jacket in blue featuring trendy patches for a modern, street-style look.",
       },
       {
         title: "Statement Geometric Print Scarf",
@@ -137,6 +143,8 @@ export const ProductData = [
         size: "Small",
         stock: "In stock",
         brand: "Foesta-demo",
+        description:
+          "Add a stylish twist to your outfit with this black scarf featuring a bold geometric print.",
       },
       {
         title: "Modern Slim Fit Suit",
@@ -151,6 +159,8 @@ export const ProductData = [
         size: "Medium",
         stock: "In stock",
         brand: "parthers-demo",
+        description:
+          "A sophisticated slim-fit suit in blue for the modern man. Perfect for business or formal events.",
       },
       {
         title: "Modern Slim Fit Chino Pants",
@@ -166,6 +176,8 @@ export const ProductData = [
         size: "Medium",
         stock: "In stock",
         brand: "Foesta-demo",
+        description:
+          "A sleek pair of black chino pants tailored for a perfect fit and versatile everyday wear.",
       },
       {
         title: "Stylish Quilted Winter Jacket",
@@ -180,6 +192,8 @@ export const ProductData = [
         size: "Large",
         stock: "In stock",
         brand: "parthers-demo",
+        description:
+          "Keep warm in style with this bright yellow quilted jacket designed for chilly winters.",
       },
       {
         title: "Casual Cotton Blazer",
@@ -194,6 +208,8 @@ export const ProductData = [
         size: "Small",
         stock: "In stock",
         brand: "Foesta-demo",
+        description:
+          "A lightweight cotton blazer in white, ideal for casual or semi-formal outings.",
       },
       {
         title: "Trendy Checked Casual Shirt",
@@ -209,6 +225,8 @@ export const ProductData = [
         size: "Medium",
         stock: "In stock",
         brand: "Foesta-demo",
+        description:
+          "A comfortable and stylish checked shirt in blue, great for casual wear.",
       },
       {
         title: "Elegant Embroidered Kurti",
@@ -223,6 +241,8 @@ export const ProductData = [
         size: "Large",
         stock: "In stock",
         brand: "Foesta-demo",
+        description:
+          "An elegant yellow kurti with beautiful embroidery work, perfect for festive occasions.",
       },
       {
         title: "Elegant Satin Saree with Blouse",
@@ -238,6 +258,8 @@ export const ProductData = [
         size: "Small",
         stock: "In stock",
         brand: "parthers-demo",
+        description:
+          "A graceful black satin saree paired with a matching blouse for an elegant traditional look.",
       },
       {
         title: "Chic Off-Shoulder Evening Gown",
@@ -252,6 +274,8 @@ export const ProductData = [
         size: "Large",
         stock: "In stock",
         brand: "Foesta-demo",
+        description:
+          "A stunning off-shoulder gown in white, designed for glamourous evening events.",
       },
       {
         title: "Cotton Printed Night Suit",
@@ -267,6 +291,8 @@ export const ProductData = [
         size: "Medium",
         stock: "In stock",
         brand: "parthers-demo",
+        description:
+          "Stay cozy and stylish with this blue cotton night suit featuring fun prints.",
       },
     ],
   },
@@ -312,6 +338,11 @@ export const ReviewsData = [
 
 export const BrandImg = [
   { BrandImg: Barnd1 },
+  { BrandImg: Barnd2 },
+  { BrandImg: Barnd3 },
+  { BrandImg: Barnd4 },
+  { BrandImg: Barnd5 },
+    { BrandImg: Barnd1 },
   { BrandImg: Barnd2 },
   { BrandImg: Barnd3 },
   { BrandImg: Barnd4 },

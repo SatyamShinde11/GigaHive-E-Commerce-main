@@ -1,50 +1,68 @@
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import type { Swiper as SwiperType } from "swiper";
+import React, { useRef, useState } from "react";
+
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-// import "./styles.css";
+import {
+  MdAddShoppingCart,
+  MdOutlineKeyboardArrowDown,
+  MdOutlineKeyboardArrowUp,
+  MdSend,
+} from "react-icons/md";
+import FooterImg from "../../assets/FooterImg";
+import { Link, useLocation } from "react-router-dom";
 
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-import checkOut from "../../assets/Footerimg.tsx";
-import { FaFacebook } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { MdSend } from "react-icons/md";
+const Index = () => {
+  const { state } = useLocation();
 
-const items = {
-  title: "Modern Slim Fit Suit",
-  price: 7000,
-  image:
-    "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/11.png?v=1716285223",
-  image2:
-    "https://cdn.shopify.com/s/files/1/0638/6879/7087/files/2.png?v=1716285182",
-  quantity: 1,
-  variant: "Default Title",
-  color: "Blue",
-  size: "Medium",
-  stock: "In stock",
-  brand: "parthers-demo",
-};
-
-const index = () => {
-  console.log("hii");
-  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+  const { product } = state;
 
   const [inputNumber, setInputNumber] = useState<number>(1);
+  const [isShowDescription, setIsShowDescription] = useState<boolean>(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const handelIncrease = () => {
+  const handleIncrease = () => {
     if (inputNumber >= 10) return;
-
     setInputNumber(inputNumber + 1);
   };
-  const handelDecrease = () => {
+  const handleDecrease = () => {
     if (inputNumber <= 1) return;
-
     setInputNumber(inputNumber - 1);
   };
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const rect = container.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left;
+    const offsetY = e.clientY - rect.top;
+
+    const xPercent = (offsetX / rect.width) * 100;
+    const yPercent = (offsetY / rect.height) * 100;
+
+    container.style.setProperty("--zoom-x", `${xPercent}%`);
+    container.style.setProperty("--zoom-y", `${yPercent}%`);
+    container.style.setProperty("--display", "block");
+  };
+  const handleMouseLeave = () => {
+    containerRef.current?.style.setProperty("--display", "none");
+  };
+
+  if (!state || !state.product) {
+    return (
+      <div className="mt-14 relative overflow-hidden flex flex-col gap-10 w-full h-[50vh] flex items-center justify-center  ">
+        <h1 className="text-2xl font-medium text-gray-500 flex items-center gap-2">
+          <MdAddShoppingCart />
+          No product found
+        </h1>
+        <button className="bg-white hover:text-white px-3 text-xs  cursor-pointer hover:bg-gray-950 hover:border-gray-950 border border-gray-200 py-2 rounded-4xl transform duration-300">
+          <Link to="/shop">Shop Now</Link>
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="mt-14 relative overflow-hidden flex flex-col gap-10 w-full">
@@ -55,129 +73,77 @@ const index = () => {
           <h1 className="text-gray-500">Shop</h1>-<h1>Product</h1>
         </div>
       </div>
-      <div className="flex  px-5 sm:px-10 md:px-16 lg:px-24 w-full gap-5 2xl:w-[1536px]">
-        <div className="w-1/2 ">
-          <Swiper
-            loop={true}
-            spaceBetween={10}
-            navigation={true}
-            thumbs={{ swiper: thumbsSwiper }}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper2"
-          >
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-            </SwiperSlide>
-          </Swiper>
-          <Swiper
-            onSwiper={setThumbsSwiper}
-            loop={true}
-            spaceBetween={10}
-            slidesPerView={4}
-            freeMode={true}
-            watchSlidesProgress={true}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-            </SwiperSlide>
-          </Swiper>
+      <div className="flex flex-wrap items-center justify-center md:justify-start md:items-start md:flex-nowrap  px-5 sm:px-10 md:px-16 lg:px-24 w-full gap-5 2xl:w-[1536px]">
+        <div
+          ref={containerRef}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          className="w-full relative group md:w-1/2 overflow-hidden flex justify-center items-center "
+          style={
+            {
+              "--url": `url(${product?.image})`,
+              "--zoom-x": "0%",
+              "--zoom-y": "0%",
+              "--display": "none",
+            } as React.CSSProperties
+          }
+        >
+          <img
+            src={product?.image}
+            className="h-[90vh] flex w-full object-cover object-[0_0] "
+          />
+          <div
+            className="absolute top-0 left-0 w-full h-full"
+            style={{
+              display: "var(--display)",
+              backgroundImage: "var(--url)",
+              backgroundColor: "black",
+              backgroundSize: "200%",
+              backgroundPosition: "var(--zoom-x) var(--zoom-y)",
+              content: "''",
+              pointerEvents: "none",
+            }}
+          ></div>
         </div>
-        <div className="w-1/2  flex flex-col gap-3 ">
-          <div className="flex text-sm font-semibold ">
+        <div className="w-full md:w-1/2  flex flex-col gap-3 ">
+          <div className="flex sm:flex-nowrap flex-wrap text-sm font-semibold ">
             <span className="text-gray-500">Product </span>-
-            <p> {items.title}</p>
+            <p> {product.title}</p>
           </div>
-          <h1 className="text-sm font-medium ">{items.title}</h1>
-          <h2 className="text-sm">₹ {items.price}</h2>
+          <h1 className="text-sm font-medium ">{product.title}</h1>
+          <h2 className="text-sm">₹ {product.price}</h2>
 
           <p className=" text-sm flex items-center gap-2 ">
-
-
-            
             <span>Color:</span>{" "}
-            <span className="text-xs text-gray-700">{items.color}</span>{" "}
+            <span className="text-xs text-gray-700">{product.color}</span>{" "}
           </p>
           <p className=" text-sm flex items-center gap-2 ">
             <span>Size:</span>{" "}
-            <span className="text-xs text-gray-700"> {items.size}</span>{" "}
+            <span className="text-xs text-gray-700"> {product.size}</span>{" "}
           </p>
 
           <div className="flex gap-2 flex-col">
             <p className="text-sm">Quantity</p>
             <div className="flex gap-2  text-xs ">
               <div className="border-gray-200 border  flex items-center rounded-full px-4  ">
-                <button onClick={handelDecrease} className=" cursor-pointer ">
+                <button onClick={handleDecrease} className=" cursor-pointer ">
                   -
                 </button>
                 <input
                   type="number"
                   value={inputNumber}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setInputNumber(e.target.value)
+                    setInputNumber(
+                      e?.target?.value ? Number(e.target.value) : 0
+                    )
                   }
                   className="w-12 flex justify-center items-center outline-none p-2"
                 />
-                <button onClick={handelIncrease} className=" cursor-pointer ">
+                <button onClick={handleIncrease} className=" cursor-pointer ">
                   +
                 </button>
               </div>
-              <button className=" text-black  px-3 text-xs  cursor-pointer  border-gray-200 hover:shadow-xs hover:bg-gray-100 hover:shadow-gray-600 border  py-2 rounded-md transform duration-300 ">
+              <button className=" text-black  px-3 text-xs  cursor-pointer  border-gray-200  hover:bg-gray-950 hover:text-white border  py-2 rounded-md transform duration-300 ">
                 Add to cart
               </button>
             </div>
@@ -187,36 +153,47 @@ const index = () => {
           </button>
           <div>
             <p className="text-sm">Guaranteed safe checkout</p>
-            <img src={checkOut} alt="" />
+            <FooterImg />
           </div>
 
           <div>
-            <h1 className="text-sm font-semibold ">Description</h1>
-            <p className="text-xs hidden">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
-              ratione quae porro dolor nihil harum aliquam, quis ab excepturi
-              maiores voluptate aspernatur aliquid laudantium natus minus
-              accusantium commodi assumenda facere corrupti! Quod veritatis,
-              esse consectetur inventore aspernatur dolore magnam dicta ratione
-              vero mollitia totam numquam sint! Adipisci cum iusto autem
-              recusandae placeat eaque, corporis praesentium et culpa, neque
-              vero tempora blanditiis voluptates doloribus. Ad ea repellendus
-              sint cupiditate, amet, odit at hic praesentium quos quae pariatur,
-              nihil impedit iusto laboriosam error eveniet maiores tempore
-              sapiente voluptates? Harum consectetur esse qui beatae ipsa
-              explicabo cumque quidem fuga omnis non soluta dignissimos magni
-              quasi, delectus ipsum vero, expedita ullam exercitationem
-              distinctio? Impedit adipisci natus quasi beatae, qui distinctio,
-              unde ipsa earum minus dolorem, molestiae error. Obcaecati sint
-              nemo cum. Eius repellendus ipsam in, voluptate debitis neque
-              nesciunt ipsa sint nulla fugiat at inventore corporis nisi, optio
-              quam consequuntur architecto, earum dignissimos placeat!
-            </p>
+            <div className=" border-t border-b border-gray-200 py-3 w-full ">
+              <div
+                onClick={() => {
+                  setIsShowDescription(!isShowDescription);
+                }}
+                className=" cursor-pointer flex items-center justify-between w-full  gap-2"
+              >
+                <h1 className="text-sm font-medium">Description</h1>
+                {isShowDescription ? (
+                  <MdOutlineKeyboardArrowUp />
+                ) : (
+                  <MdOutlineKeyboardArrowDown />
+                )}
+              </div>
+
+              <p
+                className={`${
+                  isShowDescription ? "flex" : "hidden"
+                } "text-xs text-gray-500 mt-2"`}
+              >
+                {product?.description}
+              </p>
+            </div>
           </div>
+
           <div className="flex gap-2">
-            <button className="text-md items-center gap-2 border border-gray-200 rounded-md px-3 py-1 flex text-nowrap " ><FaFacebook />FaceBook</button>
-            <button className="text-md items-center gap-2 border border-gray-200 rounded-md px-3 py-1 flex text-nowrap " ><FaSquareXTwitter />X</button>
-            <button className="text-md items-center gap-2 border border-gray-200 rounded-md px-3 py-1 flex text-nowrap " ><MdSend />Share more</button>
+            {/* <button className="text-md cursor-pointer hover:bg-black hover:text-white transition duration-300   items-center gap-2 border border-gray-200 rounded-md px-3 py-1 flex text-nowrap ">
+              <FaFacebook />
+              FaceBook
+            </button>
+            <button className="text-md cursor-pointer hover:bg-black hover:text-white transition duration-300   items-center gap-2 border border-gray-200 rounded-md px-3 py-1 flex text-nowrap ">
+              <FaSquareXTwitter />X
+            </button> */}
+            <button className="text-md cursor-pointer hover:bg-gray-950 hover:text-white transition duration-300   items-center gap-2 border border-gray-200 rounded-md px-3 py-1 flex text-nowrap ">
+              <MdSend />
+              Share more
+            </button>
           </div>
         </div>
       </div>
@@ -224,4 +201,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
